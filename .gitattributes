@@ -1,0 +1,29 @@
+# Flutter/Dart Language Detection Override
+# Exclude platform-specific boilerplate code from GitHub language statistics
+
+# Mark platform directories as generated/vendored code
+android/** linguist-generated=true
+ios/** linguist-generated=true
+linux/** linguist-generated=true
+macos/** linguist-generated=true
+web/** linguist-generated=true
+windows/** linguist-generated=true
+
+# Exclude auto-generated plugin files
+**/generated_plugin_registrant.* linguist-generated=true
+**/GeneratedPluginRegistrant.* linguist-generated=true
+
+# Force Dart detection for main source code
+lib/** linguist-language=Dart
+
+# Mark large platform C++ files as vendored
+windows/runner/win32_window.cpp linguist-vendored=true
+windows/runner/flutter_window.cpp linguist-vendored=true
+linux/my_application.cc linguist-vendored=true
+
+# Exclude build artifacts and config files
+build/** linguist-generated=true
+.dart_tool/** linguist-generated=true
+**/*.g.dart linguist-generated=true
+**/*.freezed.dart linguist-generated=true
+**/*.config.dart linguist-generated=true
